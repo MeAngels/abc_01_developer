@@ -1,0 +1,44 @@
+# https://github.com/github/gitignore
+
+# regex_glob_pattern
+
+$fileName.ext
+$folder/
+
+# everything
+*
+# *: zero or more
+# ?: wild card character
+# [abc] one of the characters
+# [a-z][A-Z][0-9]: range
+# a/**/b: nested directories
+# $onedir/*/thirdDir/
+# $folder/**/$nestedSubFolder
+
+# recommended ignore
+# passwords, credentials, personal information
+# system files or temp files
+# generated files, like tests
+# compiled
+
+# temp files
+*~
+.log
+.temp
+.tmp
+
+# to avoid reccursive add / before
+/$path
+# to specific a folder add / in end
+$folder/
+# negate
+!negate
+
+# examples:
+arqTest
+*.log
+    !output.log
+arq*
+?rq
+dirTest/
+**/dirTest
