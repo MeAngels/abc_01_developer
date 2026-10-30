@@ -1,0 +1,15 @@
+# https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings
+
+# key value
+
+# set the default begavior, in case people do not have core.autocrlf set
+* text=auto
+
+# explicitly declare text files you want to always be normalized and converted to native line ending on checkout
+*.txt text
+
+# declare files that will always have CRLF line ending on checkout
+*.windows text eol=crlf
+
+# denote all files that are truly binary and should not be modified
+*.(png|jpg) binary

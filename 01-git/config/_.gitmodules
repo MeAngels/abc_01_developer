@@ -1,0 +1,6 @@
+[submodule "$folder"]
+    path= $path
+    url= $path_url_absolute_relative
+[submodule "$folderOnThis"]
+    path= $folderOnThis
+    url= $path_url_absolute_relative
