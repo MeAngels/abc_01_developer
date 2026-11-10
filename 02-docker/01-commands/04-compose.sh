@@ -1,5 +1,6 @@
 docker network
     create $network
+        --subnet=$ip/$mask
     connect|disconnect $network $container
 
 docker compose up|down
