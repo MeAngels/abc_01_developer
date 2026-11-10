@@ -13,8 +13,6 @@
 
 docs(concepts): markdown
 
-docs(concepts): regex
-
 docs(concepts): yaml
 
 ##################################################
@@ -35,3 +33,11 @@ docs(concepts): docker
 docs(docker): dockerfile
 docs(docker): dockercompose
 docs(docker): devcontainer
+
+##################################################
+
+# others
+
+docs(concepts): regex
+
+docs(concepts): Patterns
