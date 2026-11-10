@@ -1,0 +1,32 @@
+name: theproject
+
+services:
+  client:
+    build:
+      context: .
+    image: myimagename
+    container_name: containerclient
+    environment:
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+    ports:
+      - 8080:3000
+    working_dir: /workspaces/app/
+    command: npm run dev
+    volumes:
+      - ./:/workspaces/app
+    # restart: always
+    # networks:
+      # - network
+    # volumes:
+    #   - /local/source/path:/usr/src/app:cached
+    develop:
+      watch:
+        - path: ./src
+          action: sync
+          target: /workspaces/project/src
+          ignore:
+            - node_modules/
+            - .next/
+        - path: package.json
+          action: rebuild

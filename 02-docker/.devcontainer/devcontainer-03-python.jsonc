@@ -1,0 +1,22 @@
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:3-3.14-trixie",
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {}
+	},
+	"portsAttributes": {
+		"9000": {
+			"label": "Program",
+			"onAutoForward": "notify"}
+		},
+	"postCreateCommand": "pip3 install -r requirements.txt",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python"
+			]
+		}
+	}
+}

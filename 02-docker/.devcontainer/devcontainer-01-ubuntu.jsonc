@@ -1,0 +1,6 @@
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+// https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/base/about
+{
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu"
+}

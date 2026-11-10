@@ -1,0 +1,19 @@
+name: theproject
+
+services:
+  client:
+    # image: node
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: containerclient
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8080:80
+    working_dir: /workspaces/app
+    command: node index.js
+    # command: sh -c "npm install && npm run dev"
+    volumes:
+      - ./:/workspaces/app
+      # - .:/workspaces/app

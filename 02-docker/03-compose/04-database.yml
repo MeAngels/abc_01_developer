@@ -1,0 +1,49 @@
+volumes:
+  myvolume:
+
+services:
+  database:
+    image: mysql
+    container_name: database
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=database
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pwd
+    # ports:
+    #   - 3306:3306
+    volumes:
+      # - /local/source/path:/target/container/path:cached
+      - ./db:/var/lib/mysql
+      - myvolume:/var/lib/mysql
+    # restart: always
+
+  postgres:
+    image: postgres:18
+    entrypoint: ["docker-entrypoint.sh", "postgres"]
+    command: ["-h", "localhost", "-p", "5432"]
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: mydb
+    ports:
+      - 5432:5432
+
+  app:
+    image: node:18-alpine
+    volumes:
+      - ./:/app
+      - type: bind
+        source: ./source/file
+        target: /etc/file
+        read_only: true
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: database
+    depends_on:
+      - database
+      - mysql
+    env_file:
+      - ./path/.env

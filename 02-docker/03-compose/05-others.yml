@@ -1,0 +1,20 @@
+services:
+  servicename:
+    # image: example/database
+    build:
+      context: ./path
+      dockerfile: ../subfolder.Dockerfile
+			args:
+				- KEY=value
+			tags:
+				- "myimage:mytag"
+		secrets:
+			- server-certificate
+		configs:
+			- httpd-config
+		secrets:
+			- server-certificate
+
+secrets:
+	server-certificate:
+		file: ./server.cert
