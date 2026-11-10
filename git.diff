@@ -1,0 +1,37 @@
+# comment
+! something
++ new line
+- removed line
+> new
+< old
+
+##################################################
+
+# Concepts
+
+! docs: git.diff
+
+docs(concepts): markdown
+
+docs(concepts): regex
+
+docs(concepts): yaml
+
+##################################################
+
+# Git
+
+docs(concepts): git
+
+docs(git): commands
+
+docs(git): flow
+
+##################################################
+
+# Docker
+
+docs(concepts): docker
+docs(docker): dockerfile
+docs(docker): dockercompose
+docs(docker): devcontainer

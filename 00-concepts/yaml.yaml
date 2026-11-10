@@ -1,0 +1,40 @@
+# yaml | yml: just because before extension should be 3 characters
+
+# value can be string, auto recognize, do not need quotes, but can use quotes or single quotes
+key: value
+string: auto recognize string, but can use quotes or single quotes
+
+# integer auto recognize and float|double if floating point (dot)
+integer: 1000
+float: 5.50
+
+# boolean: true|false on|off yes|no
+boolean: true
+
+# > for multi lines
+multi: >
+  each new line
+  is considered a white-space
+
+multis: |
+  new line 1
+  new line 2
+
+  new line with break before
+
+list:
+  - item 1
+  - item 2
+  - item 3
+
+listarray: [item 1, item 2, item 3]
+
+object:
+  key: value
+  property: value
+
+list_object:
+  - name: item 1
+    property: value
+  - name: item 2
+    property: value
