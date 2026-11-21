@@ -27,3 +27,4 @@ git
         [-u]
         # -u $newBranchName && --delete $oldBranchName
         [--force]
+        [--force-with-lease]

@@ -1,5 +1,5 @@
 # docker run --rm -it --name mycontainer -v mycontainer:/workspaces -p 8080:3000 node
-
+# docker run hello-world
 docker run $image
 
 docker run $command

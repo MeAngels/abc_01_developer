@@ -2,6 +2,7 @@
 	defaultBranch = main
 [core]
 	editor = code --wait
+	editor = \"%AppData%\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
 [user]
-	name = Angels
+	name = UserAngels
 	email = email@example.org
